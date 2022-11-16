@@ -46,11 +46,11 @@ fi
 # Se inserir número inválido para a escolha de teste chama a ajuda
 if [ $parametroT == "A" ]
     then
-        echo -e "\nSerá executado o Teste A $n_testes vez(es), com $parametroI bilhão(ões) de iterações, usando $parametroP processo(s) no processador\n"
+        echo -e "\nO Teste A será executado o $n_testes vez(es), com $parametroI bilhão(ões) de iterações, usando $parametroP processo(s) no processador\n"
         teste=1
     elif [ $parametroT == "B" ]
     then
-        echo -e "\nSerá executado o Teste B $n_testes vez(es), usando $parametroP processo(s) no processador.\n"
+        echo -e "\nO Teste B será executado o $n_testes vez(es), usando $parametroP processo(s) no processador.\n"
         teste=2
     else
         echo -e "\nNão foi escolhido o teste certo\n"
