@@ -2,3 +2,5 @@
 exe/
 cpu-teste
 resultado_*.txt
+stress*
+prime-number-test.c
