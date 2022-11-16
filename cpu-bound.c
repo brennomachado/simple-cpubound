@@ -5,37 +5,49 @@
 #include <stdlib.h>
 
 // Função estresse 1: Gera estresse de CPU por meio de adição em loop
-//      Parâmentro bilhoes:  inteiro que representa o número de bilhões de iteração que serão realizadas
-int estresse1(int bilhoes){
+//      Parâmentro total:  inteiro que representa o número de milhões de iteração que serão realizadas
+int estresse1(int total){
     int i, j, k, l=0;
-    for(i=0; i < bilhoes; i++)
+    for(i=0; i < total; i++)
         for(j=0; j< 1000; j++)
             for(k=0; k< 1000; k++)
                 l++;
     return 0;
 }
 
-//Função estresse 2: Criar novo método de cálculo, por enquanto é o mesmo o estresse 1 mas com 10bi de interações
-int estresse2(void){
-    int i, j, k, l=0;
-    for(i=0; i < 10000; i++)
-        for(j=0; j< 1000; j++)
-            for(k=0; k< 1000; k++)
-                l++;
+//Função estresse 2: Gera estresse de CPU calculando números primos
+//      Parâmetro total: Inteiro até onde os números primos serão calculados
+int estresse2(int total){
+    int i, num = 1, primos = 0;
+    while (num <= total) { 
+        i = 2; 
+        while (i <= num) { 
+            if(num % i == 0)
+                break;
+            i++; 
+        }
+        if (i == num){
+            primos++;
+            // printf("%d Numeros primos foram calculados até o número %d \n", primos, num);
+        }
+        num++;
+    }
+
     return 0;
 }
 
 
 // Função main:
-//      Parâmetro 1: inteiro que representa o número de bilhões de iteração que serão realizadas no teste de estresse
+//      Parâmetro 1: inteiro que representa o número de bilhões de iteração que serão realizadas no Teste 1 de estresse
 //      Parâmetro 2: inteiro que representa o número de processos que serão abertos para o teste de estresse
+//      Parâmetro 3: inteiro que representa a escolha do teste de estresse a ser realizado.
 int main(int argc, char *argv[]){
         double tempo_final;
 
         if( argc == 4){
-            int teste = atoi(argv[3]); //escolha do teste a ser executado
+            int teste = atoi(argv[3]); //Escolha do teste a ser executado
             int processos = atoi(argv[2]); // Número de processos que serão abertos
-            int iteracoes = atoi(argv[1]) * 1000 + 1; // Número de iterações de adição em bilhões
+            int iteracoes = atoi(argv[1]) * 1000; // Número de iterações de adição em bilhões
 
             pid_t pid;
             time_t start, end;
@@ -55,8 +67,8 @@ int main(int argc, char *argv[]){
                     
                     if (teste == 1)
                         estresse1(iteracoes);
-                    if (teste == 2)
-                        estresse2();
+                    else
+                        estresse2(1000000); // calcular primos até o 1 bilhão (1000000)
                     exit(0);
                 }
             }
