@@ -4,3 +4,7 @@ cpu-teste
 resultado_*.txt
 stress*
 prime-number-test.c
+resultados/Mint-VM-L-TA-entrada.txt
+resultados/Mint-VM-L-TB-entrada.txt
+resultados/Ubuntu-Nativo-TA-entrada.txt
+resultados/VirtualBox_LinuxMint-21_16_11_2022_20_03_15.png
