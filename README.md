@@ -19,14 +19,14 @@ Este é um simples execútavel para gerar CPU bound em sistemas Linux desenvolvi
     ```
 
 - ##### Parâmetros obrigatórios:
-    -i: Número inteiro para executar bilhoões de execuções.
+    **-i**: Número inteiro para executar bilhoões de execuções.
 
-    -p: Número inteiro para representar quantos processos serão abertos para cada teste.
+    **-p**: Número inteiro para representar quantos processos serão abertos para cada teste.
     
-    -t: Caracter "A" ou "B" para selecionar Teste A ou Teste B.
+    **-t**: Caracter "A" ou "B" para selecionar Teste A ou Teste B.
 
 - ##### Parâmetros opcionais:
-    -v: Número inteiro que define quantas vezes o teste será repetido.
+    **-v**: Número inteiro que define quantas vezes o teste será repetido.
 
 
 ---
