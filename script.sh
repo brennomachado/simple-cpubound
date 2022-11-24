@@ -7,10 +7,11 @@
 helpFunction()
 {
     echo ""
-    echo -e "Como usar: $0 -i [Valor X] -p [Valor X] -t [A ou B]\n"
-    echo -e "\t-i Valor X para executar X bilhões de iterações no Teste 1 (Ex: Se X=5, executará 5 bilhões de iterações)"
-    echo -e "\t-p Número Y para definir quantos processos o teste executará ao mesmo tempo"
-    echo -e "\t-t Para T=A executa Teste A, para T=B executa Teste B\n\t   OBS.: Na opção '-t B' Teste B ignora a contagem de iterações)\n\n"
+    echo -e "Como usar: \n   $0 -i [Valor X] -p [Valor Y] -t [A ou B] -v [Valor V]\n"
+    echo -e "\t-i: Valor X para executar X bilhões de iterações no Teste 1\n\t     (Ex: Se X=5, executará 5 bilhões de iterações)\n"
+    echo -e "\t-p: Número Y para definir quantos processos o teste executará ao mesmo tempo\n"
+    echo -e "\t-t: Para T=A executa Teste A, para T=B executa Teste B\n\t     OBS.: Na opção '-t B' Teste B ignora a contagem de iterações de -i)\n"
+    echo -e "\t-v: Número V para quantas vezes o teste será repetido.\n\t     Se não inserido o padrão é 1.\n\n"
     exit 1 # Sai do script após imprimir a ajuda
 }
 
@@ -37,7 +38,7 @@ fi
 
 if [ -z "$parametroV" ]
     then
-        n_testes=2 #número de retepições do teste de estresse
+        n_testes=1 #número de retepições do teste de estresse
     else
         n_testes=$parametroV
 fi
