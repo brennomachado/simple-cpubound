@@ -5,7 +5,7 @@ Este é um simples execútavel para gerar CPU bound em sistemas Linux desenvolvi
 
 
 #### Compilação e execução
-- ##### Executável:
+- ##### Baixando e compilando:
     ```
     git clone https://github.com/brennomachado/simple-cpubound.git
 
