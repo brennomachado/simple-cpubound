@@ -32,24 +32,25 @@ Este é um simples execútavel para gerar CPU bound em sistemas Linux desenvolvi
 ---
 ### Os testes
 
-#### Teste A: https://youtu.be/7fHDZOjR31c (1min)
+#### Teste A:
+Teste A é baseado em soma unitária de valor inteiro feita em loop:
 - Parâmetros usados para o artigo:
     ```
     ./script.h -i 10 -p 4 -t A -v 50
     ```
-- Video mostrando exemplo de execução do Teste A:
+- Video mostrando exemplo de execução do Teste A: https://youtu.be/7fHDZOjR31c (1min)
     <p align="center">
     <a href="http://www.youtube.com/watch?feature=player_embedded&v=7fHDZOjR31c" target="_blank"><img src="/img_teste_a.jpg" 
     alt="Vídeo de execução do Teste A" width="384" height="219" border="10" /></a>
     </p>
 
-#### Teste B: https://youtu.be/MvucFKVSUwg (4min 49s)
-
+#### Teste B: 
+Testa B é baseado em algoritmo para testar se um número é primo.
 - Parâmetros usados par ao artigo :
     ```
     ./script.h -i 1 -p 4 -t B -v 30
     ```
-- Video mostrando exemplo de execução do Teste A:
+- Video mostrando exemplo de execução do Teste A: https://youtu.be/MvucFKVSUwg (4min 49s)
     <p align="center">
     <a href="http://www.youtube.com/watch?feature=player_embedded&v=7fHDZOjR31c" target="_blank"><img src="/img_teste_a.jpg" 
     alt="Vídeo de execução do Teste B" width="384" height="219" border="10" /></a>
